@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Zeit-Anzeige</title>
+    <title>⏰ Meine Uhrzeit</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,12 +18,6 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-transform: uppercase;
         }
         nav {
             background-color: #333;
@@ -33,12 +27,9 @@
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
         }
         nav a:hover {
-            background-color: #007bff;
+            color: #007bff;
         }
         main {
             max-width: 800px;
@@ -59,31 +50,20 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        .date {
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .date h3 {
-            margin: 0;
-        }
-        .date .time {
+        .time {
             font-size: 2.5em;
             font-weight: bold;
+            color: #007bff;
+            margin: 20px 0;
         }
-        .date .date {
-            font-size: 1.2em;
-            color: #666;
+        .time .hour {
+            font-size: 3em;
         }
-        .date .year {
-            font-size: 1.8em;
-            color: #d9534f;
+        .time .minute {
+            font-size: 2em;
         }
-        .date .month {
-            font-size: 1.4em;
-            color: #999;
+        .time .second {
+            font-size: 1.5em;
         }
         footer {
             background-color: #333;
@@ -108,92 +88,62 @@
             background-color: #0056b3;
         }
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8em;
+            .time .hour {
+                font-size: 3.5em;
             }
-            .date h3 {
-                font-size: 1.8em;
+            .time .minute {
+                font-size: 2.5em;
             }
-            .date .time {
-                font-size: 2em;
+            .time .second {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🕐 Meine Zeit-Anzeige</h1>
+        <h1>🕐 Meine Uhrzeit</h1>
     </header>
     
     <nav>
         <a href="#zeit">Zeit</a>
         <a href="#date">Datum</a>
-        <a href="#knot">Knoten</a>
     </nav>
 
     <main>
         <div class="container">
             <section id="zeit">
-                <h2>🕐 Aktuelle Zeit</h2>
-                <div class="date">
-                    <h3>⏰ Uhrzeit</h3>
-                    <div class="time">00:00:00</div>
-                </div>
-                <div class="date">
-                    <h3>📅 Datum</h3>
-                    <div class="date">
-                        <span class="year">2023</span>
-                        <span class="month">01</span>
-                        <span class="day">25</span>
-                    </div>
-                </div>
-                <div class="date">
-                    <h3>📞 Telefon</h3>
-                    <a href="tel:+49123456789" class="btn">Telefon: 0123 456 789</a>
+                <h2>⏰ Aktuelle Uhrzeit</h2>
+                <div class="time">
+                    <div class="time .hour">00:00:00</div>
+                    <div class="time .minute">00:00</div>
+                    <div class="time .second">00:00:00</div>
                 </div>
             </section>
 
             <section id="date">
-                <h2>📅 Datum & Uhrzeit</h2>
-                <div class="date">
-                    <h3>📅 Datum</h3>
-                    <div class="date">
-                        <span class="year">2023</span>
-                        <span class="month">01</span>
-                        <span class="day">25</span>
-                    </div>
-                </div>
-                <div class="date">
-                    <h3>🕐 Uhrzeit</h3>
-                    <div class="time">14:30:00</div>
-                </div>
-                <div class="date">
-                    <h3>📞 Telefon</h3>
-                    <a href="tel:+49123456789" class="btn">Telefon: 0123 456 789</a>
+                <h2>📅 Datum</h2>
+                <div class="time" style="display: flex; justify-content: space-between;">
+                    <div class="time" style="color: #666;">2023</div>
+                    <div class="time" style="color: #666;">12</div>
                 </div>
             </section>
 
-            <section id="knot">
-                <h2>🎯 Knoten</h2>
+            <section id="info">
+                <h2>📞 Kontakt</h2>
                 <p>
-                    Diese Seite zeigt die aktuelle Zeit und Datum in dynamischer Form.
-                    <br>
-                    <strong>Der Date-Format-Tag</strong> zeigt die aktuelle Woche.
-                </p>
-                <p>
-                    <strong>Die Uhrzeit</strong> zeigt die Uhrzeit an, die aktuell am Bildschirm
-                    ist.
+                    Wenn du Fragen hast, kannst du uns kontaktieren.<br>
+                    <a href="mailto:kontakt@deine-website.de">kontakt@deine-website.de</a>
                 </p>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2023 Meine Zeit-Anzeige - Dynamische Zeit-Anzeige</p>
+        <p>&copy; 2023 Meine Uhrzeit</p>
         <div class="footer-links">
             <a href="#zeit">Zeit</a>
             <a href="#date">Datum</a>
-            <a href="#knot">Knoten</a>
         </div>
         <p class="btn">Mehr erfahren</p>
     </footer>
