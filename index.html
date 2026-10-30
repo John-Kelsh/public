@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
+    <title>Meine Zeit-Anzeige</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
             color: #333;
-            background-color: #f9f9f9;
         }
         header {
             background-color: #007bff;
             color: #fff;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
         }
         nav {
             background-color: #333;
@@ -27,45 +33,57 @@
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
         nav a:hover {
-            color: #007bff;
+            background-color: #007bff;
         }
         main {
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
         }
-        h1 {
-            color: #000;
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        p {
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .date {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
         }
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
+        .date h3 {
+            margin: 0;
         }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+        .date .time {
+            font-size: 2.5em;
+            font-weight: bold;
         }
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            flex: 1;
-            min-width: 300px;
+        .date .date {
+            font-size: 1.2em;
+            color: #666;
         }
-        .card h3 {
-            margin-top: 0;
+        .date .year {
+            font-size: 1.8em;
+            color: #d9534f;
+        }
+        .date .month {
+            font-size: 1.4em;
+            color: #999;
         }
         footer {
             background-color: #333;
@@ -73,6 +91,9 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+        }
+        .footer-links {
+            margin-top: 15px;
         }
         .btn {
             display: inline-block;
@@ -86,58 +107,95 @@
         .btn:hover {
             background-color: #0056b3;
         }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .date h3 {
+                font-size: 1.8em;
+            }
+            .date .time {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Meine Webseite</h1>
+        <h1>🕐 Meine Zeit-Anzeige</h1>
     </header>
     
     <nav>
-        <a href="#home">Home</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#zeit">Zeit</a>
+        <a href="#date">Datum</a>
+        <a href="#knot">Knoten</a>
     </nav>
 
     <main>
-        <section id="home">
-            <h1>Beschreibung der Website</h1>
-            <p>
-                Diese ist eine einfache, moderne HTML-Seite mit dem
-                Standard-Syntax für eine webseitengenerierung.
-            </p>
-            <p>
-                Die Seite enthält typische Elemente wie
-                <strong>Header</strong>, <strong>Nav</strong>, <strong>main</strong>,
-                <strong>footer</strong> und ein <strong>Responsive Design</strong>
-                mit Flexbox.
-            </p>
-            <a href="#features" class="btn">Mehr erfahren</a>
-        </section>
+        <div class="container">
+            <section id="zeit">
+                <h2>🕐 Aktuelle Zeit</h2>
+                <div class="date">
+                    <h3>⏰ Uhrzeit</h3>
+                    <div class="time">00:00:00</div>
+                </div>
+                <div class="date">
+                    <h3>📅 Datum</h3>
+                    <div class="date">
+                        <span class="year">2023</span>
+                        <span class="month">01</span>
+                        <span class="day">25</span>
+                    </div>
+                </div>
+                <div class="date">
+                    <h3>📞 Telefon</h3>
+                    <a href="tel:+49123456789" class="btn">Telefon: 0123 456 789</a>
+                </div>
+            </section>
 
-        <section id="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Responsive Design</li>
-                <li>HTML5 Semantik</li>
-                <li>UTF-8 Encoding</li>
-                <li>CSS3 Styling</li>
-                <li>JavaScript (Optional)</li>
-            </ul>
-        </section>
+            <section id="date">
+                <h2>📅 Datum & Uhrzeit</h2>
+                <div class="date">
+                    <h3>📅 Datum</h3>
+                    <div class="date">
+                        <span class="year">2023</span>
+                        <span class="month">01</span>
+                        <span class="day">25</span>
+                    </div>
+                </div>
+                <div class="date">
+                    <h3>🕐 Uhrzeit</h3>
+                    <div class="time">14:30:00</div>
+                </div>
+                <div class="date">
+                    <h3>📞 Telefon</h3>
+                    <a href="tel:+49123456789" class="btn">Telefon: 0123 456 789</a>
+                </div>
+            </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>
-                Wenn du Fragen hast, kannst du uns
-                kontaktieren.<br>
-                <a href="mailto:kontakt@deine-website.de">kontakt@deine-website.de</a>
-            </p>
-        </section>
+            <section id="knot">
+                <h2>🎯 Knoten</h2>
+                <p>
+                    Diese Seite zeigt die aktuelle Zeit und Datum in dynamischer Form.
+                    <br>
+                    <strong>Der Date-Format-Tag</strong> zeigt die aktuelle Woche.
+                </p>
+                <p>
+                    <strong>Die Uhrzeit</strong> zeigt die Uhrzeit an, die aktuell am Bildschirm
+                    ist.
+                </p>
+            </section>
+        </div>
     </main>
 
     <footer>
-        &copy; 2023 Meine Webseite
+        <p>&copy; 2023 Meine Zeit-Anzeige - Dynamische Zeit-Anzeige</p>
+        <div class="footer-links">
+            <a href="#zeit">Zeit</a>
+            <a href="#date">Datum</a>
+            <a href="#knot">Knoten</a>
+        </div>
+        <p class="btn">Mehr erfahren</p>
     </footer>
 </body>
 </html>
